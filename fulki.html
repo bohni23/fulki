@@ -815,7 +815,7 @@ function recoverNapState() {
 // F — RENDER FUNCTIONS
 // ============================================================
 const CATS = [
-  { key:'food',    emoji:'🍗', label:'Food',    color:'#C87F1A', bg:'#FEF3DC', border:'#F5DAA0' },
+  { key:'food',    emoji:'🥩', label:'Food',    color:'#C87F1A', bg:'#FEF3DC', border:'#F5DAA0' },
   { key:'water',   emoji:'💧', label:'Water',   color:'#3A9BD5', bg:'#E3F2FD', border:'#B3D9F5' },
   { key:'nap',     emoji:'💤', label:'Nap',     color:'#7A68B0', bg:'#EEE9F8', border:'#CFC8EE' },
   { key:'pee',     emoji:'🌱', label:'Pee',     color:'#3D8F3D', bg:'#E8F5E8', border:'#A8D8A8' },
@@ -950,7 +950,7 @@ function renderPredictions() {
 
   document.getElementById('prediction-section').innerHTML =
     stageBanner +
-    `<div class="section-label">🔮 Next predictions</div>` +
+    `<div class="section-label">Next predictions 🔮</div>` +
     `<div class="predictions-row">${cards}</div>` +
     `<div class="pred-note">Accuracy grows as more events are logged</div>`;
 }
