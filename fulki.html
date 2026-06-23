@@ -632,17 +632,15 @@
 // ============================================================
 const USE_MOCK = false;
 
-// ── PASTE YOUR FIREBASE CONFIG HERE ──────────────────────────
 const firebaseConfig = {
-  apiKey: "AIzaSyCWiRqMtX05cuKGLxxPlcwE16aM2YTFX4w",
-  authDomain: "fulki-tracker.firebaseapp.com",
-  projectId: "fulki-tracker",
-  storageBucket: "fulki-tracker.firebasestorage.app",
+  apiKey:            "AIzaSyCWiRqMtX05cuKGLxxPlcwE16aM2YTFX4w",
+  authDomain:        "fulki-tracker.firebaseapp.com",
+  projectId:         "fulki-tracker",
+  storageBucket:     "fulki-tracker.firebasestorage.app",
   messagingSenderId: "1011227937532",
-  appId: "1:1011227937532:web:17dc20b0969fb069ee2579",
-  measurementId: "G-YNFS44HM2W"
+  appId:             "1:1011227937532:web:17dc20b0969fb069ee2579",
+  measurementId:     "G-YNFS44HM2W"
 };
-// ─────────────────────────────────────────────────────────────
 
 // ── Mock data (only active when USE_MOCK = true) ──
 const _now = Date.now();
@@ -704,6 +702,11 @@ function isSameDay(a, b) {
 }
 function startOfDay(d) { const r=new Date(d); r.setHours(0,0,0,0); return r; }
 function endOfDay(d)   { const r=new Date(d); r.setHours(23,59,59,999); return r; }
+
+// Prediction constants needed before Firebase init calls computePredictions()
+const PREDICT_CATS = ['pee','poop','zoomies'];
+const DECAY  = 0.05;
+const WINDOW = 50;
 
 // ============================================================
 // C — FIREBASE INIT & LISTENERS
@@ -882,10 +885,6 @@ function deleteVetNote(id) {
 // ============================================================
 // E — PREDICTION ENGINE
 // ============================================================
-const PREDICT_CATS = ['pee','poop','zoomies'];
-const DECAY  = 0.05;
-const WINDOW = 50;
-
 function computePredictions() {
   state.predictions = {};
   const allAsc    = [...state.logs].sort((a,b) => a.timestamp - b.timestamp);
