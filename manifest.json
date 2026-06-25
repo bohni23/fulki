@@ -8,14 +8,14 @@
   "theme_color": "#6E3B83",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "DSCF3047.JPG",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/jpeg"
     },
     {
-      "src": "icon.png",
+      "src": "DSCF3047.JPG",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "any maskable"
     }
   ]
