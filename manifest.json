@@ -1,8 +1,7 @@
 {
   "name": "Fulki Tracker",
   "short_name": "Fulki",
-  "description": "Daily puppy tracker for Fulki",
-  "start_url": "./fulki.html",
+  "start_url": "fulki.html",
   "display": "standalone",
   "background_color": "#FAF5FC",
   "theme_color": "#6E3B83",
